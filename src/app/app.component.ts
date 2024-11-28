@@ -1,12 +1,20 @@
 import { Component } from '@angular/core';
+import { ConfigurationComponent } from './components/configuration/configuration.component';
 import { RouterOutlet } from '@angular/router';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { LogTerminalComponent } from './components/log-terminal/log-terminal.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [
+    RouterOutlet,
+    ConfigurationComponent,
+    DashboardComponent,
+    LogTerminalComponent
+  ],
+  templateUrl: './app.component.html'
 })
 export class AppComponent {
-  title = 'tickets-fe';
+
 }

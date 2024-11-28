@@ -1,0 +1,9 @@
+<div class="terminal-container">
+    <div class="terminal-header">
+        <p>Available Tickets: {{ ticketCount }}</p>
+        <button class="clear-button" (click)="clearLogs()">clear</button>
+    </div>
+    <div class="log-container" #logContainer>
+        <div *ngFor="let log of logs" class="log-entry">{{ log }}</div>
+    </div>
+</div>

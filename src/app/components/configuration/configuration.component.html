@@ -1,0 +1,47 @@
+<div class="config-container">
+    <div class="config-section">
+        <h2>Ticket System Configuration</h2>
+        <form [formGroup]="configForm" (ngSubmit)="onSubmit()" class="config-form">
+            <div class="form-field">
+                <label for="totalTickets">Total Tickets Per Vendor*</label>
+                <input id="totalTickets" matInput type="number" formControlName="totalTickets">
+            </div>
+
+            <div class="form-field">
+                <label for="ticketReleaseRate">Ticket Release Rate(Tickets/Sec)*</label>
+                <input id="ticketReleaseRate" matInput type="number" formControlName="ticketReleaseRate">
+            </div>
+
+            <div class="form-field">
+                <label for="customerRetrievalRate">Customer Retrieval Rate(Tickets/Sec)*</label>
+                <input id="customerRetrievalRate" matInput type="number" formControlName="customerRetrievalRate">
+            </div>
+
+            <div class="form-field">
+                <label for="maxTicketCapacity">Max Ticket Pool Capacity*</label>
+                <input id="maxTicketCapacity" matInput type="number" formControlName="maxTicketCapacity">
+            </div>
+
+            <button mat-raised-button color="primary" type="submit" [disabled]="configForm.invalid">Configure</button>
+        </form>
+    </div>
+
+    <div class="controls-section">
+        <h2>Simulation Controls</h2>
+        <div class="button-grid">
+            <div class="button-row">
+                <button mat-raised-button (click)="startSimulation()">Start Simulation</button>
+                <button mat-raised-button (click)="stopSimulation()">Stop Simulation</button>
+            </div>
+            <div class="button-row">
+                <button mat-raised-button (click)="addVendor()">Add Vendor</button>
+                <button mat-raised-button (click)="removeVendor()">Remove Vendor</button>
+            </div>
+            <div class="button-row">
+                <button mat-raised-button (click)="addCustomer(false)">Add Regular Customer</button>
+                <!-- <button mat-raised-button (click)="addCustomer(true)">Add VIP Customer</button> -->
+                <button mat-raised-button (click)="removeCustomer()">Remove Customer</button>
+            </div>
+        </div>
+    </div>
+</div>

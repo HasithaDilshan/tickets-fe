@@ -1,0 +1,77 @@
+.terminal-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: #1e1e1e;
+    font-family: 'Courier New', monospace;
+    color: #e0e0e0;
+    overflow: hidden;
+}
+
+.terminal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #2a2a2a;
+    border-bottom: 1px solid #333;
+}
+
+.terminal-header p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #00ff00;
+}
+
+.clear-button {
+    background-color: transparent;
+    border: 1px solid #666;
+    color: #e0e0e0;
+    padding: 4px 8px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    font-family: inherit;
+}
+
+.clear-button:hover {
+    background-color: #333;
+    border-color: #888;
+}
+
+.log-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 12px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.log-entry {
+    padding: 2px 0 2px 8px;
+    border-left: 2px solid #444;
+    margin-bottom: 4px;
+}
+
+.log-entry:hover {
+    background-color: #2a2a2a;
+}
+
+/* Minimal scrollbar */
+.log-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.log-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.log-container::-webkit-scrollbar-thumb {
+    background-color: #444;
+    border-radius: 3px;
+}
+
+.log-container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}

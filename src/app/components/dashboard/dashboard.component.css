@@ -1,0 +1,29 @@
+.dashboard-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    padding: 15px;
+}
+
+h2 {
+    margin: 0 0 10px 0;
+    font-size: 1.5rem;
+}
+
+.ticket-count {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.chart-container {
+    position: relative;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
