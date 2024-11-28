@@ -12,8 +12,8 @@
     flex-direction: row;
     flex: 1;
     overflow: auto;
-    /* gap: 15px;
-    padding: 15px; */
+    gap: 15px;
+    padding: 15px;
 }
 
 .left-column {
